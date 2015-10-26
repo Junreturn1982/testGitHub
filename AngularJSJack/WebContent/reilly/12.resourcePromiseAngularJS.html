@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>Example resource</title>
+<script src="../scripts/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
+<script src="../scripts/controllers/12controllers.js"></script>
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div ng-app="app">
+		<div ng-controller="PromiseCtrl">
+			<h2>$resource().get()</h2>
+			<h3>Example 1 : The data directly returned by $resource().get()</h3>
+			<p>{{example1}}</p>
+			<h3>Example 2 : Success callback with $promise and then()</h3>
+			<p>{{example2}}</p>
+			<h3>Example 3 : Error callback with $promise and then()</h3>
+			<p>{{example3}}</p>
+			<h3>Example 4 : Success callback inside the get()</h3>
+			<p>{{example4}}</p>
+			<h3>Example 5 : Error callback inside the get()</h3>
+			<p>{{example5}}</p>
+			<h3>Example 6 : use $http </h3>
+			<p>{{example6}}</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Your Shopping Cart</title>
+  <script src="../scripts/angular.js"></script>
+  <script src="../scripts/jquery-2.1.4.js"></script> 
+  <link rel="stylesheet" href="../css/style.css"></link>
+  <script src="../scripts/watchFn.js"></script> 
+</head>
+<body ng-app='myApp'>
+    <div ng-controller="CartController">
+      <div ng-repeat="item in items">
+      <span>{{item.title}}</span>
+      <input ng-model="item.quantity">
+      <span>{{item.price | currency}}</span>
+      <span>{{item.price * item.quantity | currency}}</span>
+      </div>
+      <div>Total: {{totalCart() | currency}}</div>
+      <div>Discount: {{bill.discount | currency}}</div>
+      <div>Subtotal: {{subtotal() | currency}}</div>
+    </div>
+    
+</body>
+</html>

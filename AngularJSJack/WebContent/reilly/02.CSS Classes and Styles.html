@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>Your Shopping Cart</title>
+  <script src="../scripts/angular.js"></script>
+  <script src="../scripts/jquery-2.1.4.js"></script> 
+  <link rel="stylesheet" href="../css/style.css"></link>
+</head>
+<body ng-app='myApp'>
+    <div ng-controller='DeathrayMenuController'>
+      <button ng-click='toggleMenu()'>Toggle Menu</button>
+      <ul ng-show='menuStateshow'>
+        <li ng-click='stun()'>Stun</li>
+        <li ng-click='disintegrate()'>Disintegrate</li>
+        <li ng-click='erase()'>Erase from history</li>
+      </ul>
+      <ul>
+        <li class='menu-disabled-{{isDisabled}}' ng-click='stun()'>Stun</li>
+        ...
+      </ul>
+    <div/>
+
+    <div ng-controller='HeaderController'>
+      ...
+      <div ng-class='{error: isError, warning: isWarning}'>{{messageText}}</div>
+      <button ng-click='showError()'>Simulate Error</button>
+      <button ng-click='showWarning()'>Simulate Warning</button>
+    </div>
+
+    <table ng-controller='RestaurantTableController'>
+      <tr ng-repeat='restaurant in directory' ng-click='selectRestaurant($index)'
+      ng-class='{selected: $index==selectedRow}'>
+      <td>{{restaurant.name}}</td>
+      <td>{{restaurant.cuisine}}</td>
+      </tr>
+    </table>
+    <script>
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller('DeathrayMenuController', function($scope) {
+      $scope.menuStateshow = false;
+      $scope.toggleMenu = function() {
+      $scope.menuStateshow = !$scope.menuStateshow;
+      };
+
+      $scope.isDisabled = false;
+      $scope.stun = function() {
+      // stun the target, then disable menu to allow regeneration
+      $scope.isDisabled = 'true';
+      };
+    });
+
+    myApp.controller('HeaderController', function($scope) {
+      $scope.isError = false;
+      $scope.isWarning = false;
+      $scope.showError = function() {
+        $scope.messageText = 'This is an error!';
+        $scope.isError = true;
+        $scope.isWarning = false;
+      };
+      $scope.showWarning = function() {
+        $scope.messageText = 'Just a warning. Please carry on.';
+        $scope.isWarning = true;
+        $scope.isError = false;
+      };
+    });
+
+     myApp.controller('RestaurantTableController', function($scope) {
+        $scope.directory = [{name:'The Handsome Heifer', cuisine:'BBQ'},
+              {name:'Fired', cuisine:'abc'},
+              {name:'Cooking', cuisine:'qwe'}
+                ];
+        $scope.selectRestaurant = function(row) {
+          $scope.selectedRow = row;
+        };
+     });
+
+    </script>
+  </body>
+  </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<title>GutHub - Create and Share</title>
+<script src="../scripts/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-mocks.js"></script>
+<script src="../scripts/directives/11directives.js"></script>
+<script src="../scripts/services/11services.js"></script>
+<script src="../scripts/controllers/11controllers.js"></script>
+<link href="../css/bootstrap.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+</head>
+<body ng-app="guthub">
+	<header>
+		<h1>GutHub</h1>
+	</header>
+	<div butterbar>Loading...</div>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="col-md-2">
+				<!--Sidebar-->
+				<div id="focus">
+					<a href="#/new">New Recipe</a>
+				</div>
+				<div>
+					<a href="#/">Recipe List</a>
+				</div>
+			</div>
+			<div class="col-md-7">
+				<div ng-view></div>
+				<br>
+				<img class="img-responsive" src="../images/DeferredPromise.jpg" alt="" />
+				<pre>
+<b>ng-view</b>: This is where the last piece of magic happens. In our controllers section, 
+we defined our routes. As part of that definition, we denoted the URL for each route, 
+the controller associated with the route, and a template. When AngularJS detects a route change, 
+it loads the template, attaches the controller to it, and replaces the ngview with the contents of the template.
+				</pre>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
