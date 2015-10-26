@@ -1,4 +1,4 @@
-noi dung nay la de kiem tra Serializable. Tham khao them:  http://gite.vn/vn/index.html 
+noi dung nay la de kiem tra Serializable. Tham khao them:  http://gite.vn/vn/index.html, https://git-scm.com/book/vi/v1/ 
 $ git pull 
 * cd to file need clone or pull: $ cd /d/AngularJS/Git
 $ git config --global user.name "Junreturn1982"
