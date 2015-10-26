@@ -1,6 +1,6 @@
 noi dung nay la de kiem tra Serializable. Tham khao them:  http://gite.vn/vn/index.html, https://git-scm.com/book/vi/v1/
 Git: Distributed Version Control System – DVCS
-
+Như mình đã giải thích ở trên, các máy tính có thể clone lại mã nguồn từ một repository và Github chính là một dịch vụ máy chủ repository công cộng, mỗi người có thể tạo tài khoản trên đó để tạo ra các kho chứa của riêng mình để có thể làm việc.
 * cd to file need clone or pull: $ cd /d/AngularJS/Git
 $ git config --global user.name "Junreturn1982"
 $ git config --global user.email "ngochoang071982@gmail.com"
