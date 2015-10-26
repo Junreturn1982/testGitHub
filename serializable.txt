@@ -1,0 +1,2 @@
+noi dung nay la de kiem tra Serializable
+$ git pull 
