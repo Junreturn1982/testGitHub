@@ -1,2 +1,14 @@
 noi dung nay la de kiem tra Serializable
 $ git pull 
+* cd to file need clone or pull: $ cd /d/AngularJS/Git
+$ git config --global user.name "Junreturn1982"
+$ git config --global user.email "ngochoang071982@gmail.com"
+* nhan ban (clone) tren git: $ git clone https://github.com/Junreturn1982/testGitHub.git
+* add all files: $ git add .
+* commit de thay doi repository: $ git commit -m "add new files"
+* tag theo yeu cau: $ git tag version1.0
+* update branch master: $ git push origin master
+* day tag len github: $ git push origin version1.0
+
+
+
